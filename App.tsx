@@ -117,7 +117,20 @@ function App(): JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  return <MyMap />;
+  return (
+    <SafeAreaView>
+      <View
+        style={{
+          flexDirection: 'row',
+          height: 100,
+          padding: 20,
+          backgroundColor: 'red',
+        }}>
+        <Text style={{color: 'white'}}>hello naver map</Text>
+      </View>
+      <MyMap />
+    </SafeAreaView>
+  );
 }
 
 const styles = StyleSheet.create({
